@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan Time</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Display the countdown timer in an element -->
+<h1>Ramadan is in</h1>
+<p id="demo">Welcome</p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate_time = new Date("Apr 12, 2021 23:59:59").getTime();
+
+// Update the count down every 1 second
+var interval = setInterval(function() {
+
+  // Get today's date and time
+  var current_time = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var time_difference = countDownDate_time - current_time;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(time_difference / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((time_difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((time_difference % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((time_difference % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "<font id=day>D</font> :" + hours + "<font id=hour>H</font> :"
+  + minutes + "<font id=minute>M</font> :" + seconds + "<font id=second>S</font>";
+
+  // If the count down is finished, write some text
+  if (time_difference < 0) {
+    clearInterval(interval);
+    document.getElementById("demo").innerHTML = "TIME EXPIRED";
+  }
+}, 1000);
+</script>
+</body>
+</html>

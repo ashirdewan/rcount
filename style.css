@@ -1,0 +1,25 @@
+p{
+    font-family: 'Digital-7','Times New Roman';
+    text-align: center;
+    font-weight: bold;
+    font-size: 80px;
+    font-style: italic;
+    color: rgb(255, 0, 98);
+}
+h1{
+    font-family: 'Algerian';
+    text-align: center;
+    font-weight: bold;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    
+}
+font{
+    font-family: 'Times New Roman';
+    font-style: normal;
+    color: rgb(255, 0, 170);
+}
+body{
+    background-image: url("img1.jpg");
+    background-color: #cccccc;
+}
